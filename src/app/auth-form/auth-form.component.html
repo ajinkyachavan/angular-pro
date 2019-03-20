@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <ng-content></ng-content>
+</mat-toolbar>
+<mat-card class="my-card">
+  <mat-card-content>
+    <form
+      #form="ngForm"
+      (ngSubmit)="onSubmit(form.value)"
+      class="my-form"
+    >
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          name="email"
+          type="email"
+          [(ngModel)]="email"
+        >
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          name="password"
+          type="password"
+          [(ngModel)]="password"
+        >
+      </mat-form-field>
+      <mat-card-actions>
+        <ng-content select="app-auth-remember"></ng-content>
+      </mat-card-actions>
+      <mat-card-actions>
+        <ng-content select="button"></ng-content>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

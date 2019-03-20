@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-pro-course-ajinkya';
+  rememberMe: boolean = false;
+
+  createUser(event) {
+    console.log('Create user %s', event);
+  }
+
+  loginUser(event) {
+    console.log(`Create user ${event} ${this.rememberMe}`);
+  }
+
+  rememberUser(remember: boolean) {
+    this.rememberMe = remember;
+  }
 }

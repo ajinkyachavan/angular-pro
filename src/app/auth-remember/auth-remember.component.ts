@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AuthRememberComponent implements OnInit {
 
-  @Output() checked: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() checkedValue: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class AuthRememberComponent implements OnInit {
   }
 
   onChecked(value: boolean) {
-    this.checked.emit(value);
+    this.checkedValue.emit(value);
   }
 
 }

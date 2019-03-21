@@ -10,11 +10,11 @@ export class AppComponent {
   rememberMe: boolean = false;
 
   createUser(event) {
-    console.log('Create user %s', event);
+    console.log('Created user succesfully - ' + JSON.stringify(event));
   }
-
+  
   loginUser(event) {
-    console.log(`Create user ${event} ${this.rememberMe}`);
+    console.log('Logged in user succesfully - ' + JSON.stringify(event) + ' ' + this.rememberMe);
   }
 
   rememberUser(remember: boolean) {
